@@ -8,27 +8,23 @@ public class Test1 {
 
     public static double basicCalculator(Operation operation, int num1, int num2){
         double result = 0;
-
-        switch(operation) {
-            case ADD:
-                System.out.println("CS193 sucks");
-                break;
-            case SUBTRACT:
-                System.out.println("CS193 is not everyone's favorite class");
-                break;
-            case MULTIPLY:
-                System.out.println("The CS193 lecturers do not want us to thrive in CS");
-                break;
-            case DIVIDE:
-                if (num2 == 0) {
-                    System.out.println("Error: u suck");
-                } else {
-                    result = num1 / num2;
-                }
-                break;
+        // if operation = ADD, return the sum
+        if (operation = Operation.ADD) {
+                result = num1 + num2;
+            }
+        else if (operation = Operation.SUBTRACT) {
+           return num1-num2;
         }
-
-        return result;
+        else if (operation = Operation.MULTIPLY) {
+            return num1*num2;
+        }
+        else if (operation = Operation.DIVIDE) {
+            if (num2 == 0) {
+                System.out.println("Can't divide by 0");
+            } else {
+                result = ((double)num1) / num2;
+            }
+        }
     }
 
     public static void main(final String[] args) {
